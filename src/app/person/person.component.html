@@ -1,0 +1,18 @@
+<!-- person.component.html -->
+<div class="person">
+  <form [formGroup]="messageForm" (ngSubmit)="sendMessage()">
+    <mat-form-field appearance="outline" floatLabel="always" class="text-field" [hideRequiredMarker]="true">
+      <mat-label>{{name}}</mat-label>
+      <input matInput class="input-message" formControlName="message" placeholder="Enter your message here...">
+
+    </mat-form-field>
+
+    <div class="button-container">
+      <button type="submit" mat-raised-button [disabled]="messageForm.invalid">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+        SEND
+      </button>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="main">
+  <app-header (addNewPersonClicked)="addNewPerson()"></app-header>
+
+  <div class="app-body">
+    <div class="container">
+      <div class="left-column">
+        <!-- Content for the left column (e.g., chat controls) -->
+        <div class="chat-window">
+          <app-person *ngFor="let person of people; let i = index" [name]="'Person ' + (i + 1)"></app-person>
+        </div>
+      </div>
+      <div class="right-column">
+
+        <!-- Chat window content -->
+        <app-chat [messages]="messages" (clearChat)="clearChat()"></app-chat> <!-- Include the chat component here -->
+      </div>
+    </div>
+  </div>
+</div>

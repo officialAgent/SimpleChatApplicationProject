@@ -1,0 +1,22 @@
+<!-- chat.component.html -->
+<h4 class="gray-color">CHAT WINDOW</h4>
+<div class="chat">
+  <mat-list>
+    <mat-list-item *ngFor="let message of messages">
+      <div class="message-container">
+        <mat-icon class="gray-color">bookmark</mat-icon>
+        <div class="message-content">
+          <div class="name">{{ message.name }}</div>
+          <div class="message-text">{{ message.message }}</div>
+          <mat-divider></mat-divider>
+        </div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+  <div class="chat-controls">
+    <button mat-button class="clear-button" (click)="clearChat.emit()">
+      <mat-icon>clear</mat-icon>
+      CLEAR CHAT WINDOW
+    </button>
+  </div>
+</div>
